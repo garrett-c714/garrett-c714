@@ -1,0 +1,8 @@
+[core]
+	editor = \"C:\\Users\\gcbla\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe\" --wait
+[user]
+	name = Garrett Cox
+	email = gcox5714@gmail.com
+[alias]
+	st = status
+	yolo = !git commit -m \"$(curl -s http://whatthecommit.com/index.txt)\"
