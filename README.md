@@ -1,4 +1,4 @@
-## garrett-c714 - README 🚀
+## Garrett Cox (garrett-c714) 🚀
 
 ---
 
