@@ -17,6 +17,6 @@
 
 
 ;; (global-display-line-numbers-mode 1)
-;; I like the idea of line numbers but not EVERWHERE
+;; I like the idea of line numbers but not EVERyWHERE
 ;; Want to figure out how to only enable them for your typical code file
 
