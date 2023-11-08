@@ -1,5 +1,5 @@
 [core]
-	editor = \"C:\\Users\\gcbla\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe\" --wait
+	editor = emacs -nw
 [user]
 	name = Garrett Cox
 	email = gcox5714@gmail.com
