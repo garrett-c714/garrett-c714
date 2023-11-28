@@ -4,5 +4,5 @@
 	name = Garrett Cox
 	email = gcox5714@gmail.com
 [alias]
-	st = status
+	st = status --short
 	yolo = !git commit -m \"$(curl -s http://whatthecommit.com/index.txt)\"
