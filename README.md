@@ -8,7 +8,6 @@ I fell in love with programming as soon as I took my first computer science cour
 
 *   🌍  I'm based in State College, PA
 *   ✉️  You can contact me at [gcox5714@gmail.com](mailto:gcox5714@gmail.com)
-*   🧠  I'm learning Theory of Computation, Statistics, and Systems Programming in the Fall
 
 ### Skills
 
