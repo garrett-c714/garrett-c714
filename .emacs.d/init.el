@@ -32,4 +32,12 @@
 
 (global-display-line-numbers-mode 1)
 
-(set-window-scroll-bars (minibuffer-window) 0 'none)
+
+(set-window-scroll-bars (minibuffer-window) nil nil)
+
+
+;; Hide scroll bar and scroll buttons in the minibuffer
+(add-hook 'minibuffer-setup-hook (lambda () (set-window-scroll-bars (minibuffer-window) nil nil)))
+
+;; Restore scroll bar in regular buffers
+(add-hook 'minibuffer-exit-hook (lambda () (setq-local scroll-bar-mode nil)))
