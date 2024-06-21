@@ -4,7 +4,7 @@ Hi! ![](https://user-images.githubusercontent.com/18350557/176309783-0785949b-91
 \- Computer Science Student
 ---------------------------
 
-I fell in love with programming as soon as I took my first computer science course in high school. Ever since then I've known that I wanted to be a Software Engineer after graduating. I'm currently in my junior year at The Pennsylvania State University. This summer, I'm working at the Penn State Applied Research Lab as a Software Engineering Intern. Outside of the classroom, I'm a big fan of the outdoors. You'll find me hiking, snowboarding, or playing disc golf pretty much whenever I get the chance!
+I fell in love with programming as soon as I took my first computer science course in high school. Ever since then I've known that I wanted to be a Software Engineer after graduating. I'm currently in my junior year at The Pennsylvania State University. This summer, I'm working at [Peraton](https://www.peraton.com/) as a Software Engineering Intern. Outside of the classroom, I'm a big fan of the outdoors. You'll find me hiking, snowboarding, or playing disc golf pretty much whenever I get the chance!
 
 *   🌍  I'm based in State College, PA
 *   ✉️  You can contact me at [gcox5714@gmail.com](mailto:gcox5714@gmail.com)
