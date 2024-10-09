@@ -31,6 +31,11 @@
 
 
 (global-display-line-numbers-mode 1)
+(dolist (mode '(shell-mode-hook
+	       eshell-mode-hook
+	       term-mode-hook
+	       comint-mode-hook))
+  (add-hook mode (lambda () (display-line-numbers-mode 0))))
 
 
 (set-window-scroll-bars (minibuffer-window) nil nil)
