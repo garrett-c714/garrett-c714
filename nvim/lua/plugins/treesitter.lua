@@ -9,9 +9,11 @@ local M = {
             highlight = {
                 enable = true,
             },
+            indent = {
+                enable = true,
+            },
         }
     end,
 }
 
 return { M }
-
