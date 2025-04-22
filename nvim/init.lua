@@ -10,5 +10,4 @@ require('settings')
 require("config.lazy")
 
 -- Keymaps
--- broken, find & fix binding for hover
--- require("config.keymaps")
+require("config.keymaps")
