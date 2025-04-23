@@ -8,7 +8,7 @@ local M = {
     config = function()
         require("mason").setup()
         require("mason-lspconfig").setup({
-            ensure_installed = { "lua_ls", "ts_ls", "pyright" },
+            ensure_installed = { "lua_ls", "ts_ls", "pyright", "jdtls" },
             automatic_installation = true,
         })
 
@@ -17,13 +17,16 @@ local M = {
 
         -- Change setups here
         lspconfig.lua_ls.setup({
-            capabilities = capabilities,
+                capabilities = capabilities,
         })
         lspconfig.ts_ls.setup({
-            capabilities = capabilities,
+                capabilities = capabilities,
         })
         lspconfig.pyright.setup({
-            capabilities = capabilities,
+                capabilities = capabilities,
+        })
+        lspconfig.jdtls.setup({
+                capabilities = capabilities,
         })
     end,
 }
