@@ -28,6 +28,17 @@ local M = {
         lspconfig.jdtls.setup({
                 capabilities = capabilities,
         })
+        lspconfig.cssls.setup({
+                capabilities = capabilities,
+                settings = {
+                        css = {
+                                validate = true,
+                        },
+                        scss = {
+                                validate = true,
+                        },
+                },
+        })
     end,
 }
 
