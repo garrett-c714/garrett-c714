@@ -3,4 +3,7 @@ local M = {
         dependencies = { "nvim-lua/plenary.nvim" }
 }
 
+-- Required for "Live Grep"
+-- https://github.com/BurntSushi/ripgrep
+
 return { M }
