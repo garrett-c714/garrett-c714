@@ -15,30 +15,20 @@ local M = {
         local lspconfig = require("lspconfig")
         local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-        -- Change setups here
-        lspconfig.lua_ls.setup({
-                capabilities = capabilities,
-        })
-        lspconfig.ts_ls.setup({
-                capabilities = capabilities,
-        })
-        lspconfig.pyright.setup({
-                capabilities = capabilities,
-        })
-        lspconfig.jdtls.setup({
-                capabilities = capabilities,
-        })
-        lspconfig.cssls.setup({
-                capabilities = capabilities,
-                settings = {
-                        css = {
-                                validate = true,
-                        },
-                        scss = {
-                                validate = true,
-                        },
-                },
-        })
+        for _, server_name in ipairs(require("mason-lspconfig").get_installed_servers()) do
+                local opts = {
+                        capabilities = capabilities,
+                }
+
+                if server_name == "cssls" then
+                        opts.settings = {
+                                css = { validate = true },
+                                scss = { validate = true },
+                        }
+                end
+
+                require("lspconfig")[server_name].setup(opts)
+        end
     end,
 }
 
