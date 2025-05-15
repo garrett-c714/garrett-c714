@@ -3,7 +3,7 @@ local M = {
         cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
         ft = { "markdown" },
         -- build = function() vim.fn["mkdp#util#install"]() end,
-        build = "cd app && npm install",
+        build = "cd app && npm install && git restore .",
         config = function()
                 local IMAGE_PATH = "/home/garcox/.markdown_images"
 
