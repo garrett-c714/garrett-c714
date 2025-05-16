@@ -1,5 +1,6 @@
 local M = {
     "neovim/nvim-lspconfig",
+    commit = "fb733ac",
     dependencies = {
         -- Installer
         { "williamboman/mason.nvim", config=true },
