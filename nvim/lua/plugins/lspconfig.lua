@@ -26,9 +26,18 @@ local M = {
                                 css = { validate = true },
                                 scss = { validate = true },
                         }
+
+                elseif server_name == "lua_ls" then
+                        opts.settings = {
+                                Lua = {
+                                        diagnostics = {
+                                                globals = { "vim" },
+                                        },
+                                },
+                        }
                 end
 
-                require("lspconfig")[server_name].setup(opts)
+                lspconfig[server_name].setup(opts)
         end
     end,
 }
