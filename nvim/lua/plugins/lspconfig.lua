@@ -1,6 +1,5 @@
 local M = {
     "neovim/nvim-lspconfig",
-    commit = "fb733ac",
     dependencies = {
         -- Installer
         { "williamboman/mason.nvim", config=true },
@@ -10,7 +9,8 @@ local M = {
         require("mason").setup()
         require("mason-lspconfig").setup({
             ensure_installed = { "lua_ls", "ts_ls", "pyright", "jdtls" },
-            automatic_installation = true,
+            automatic_enable = false,
+            -- automatic_installation = true,
         })
 
         local lspconfig = require("lspconfig")
