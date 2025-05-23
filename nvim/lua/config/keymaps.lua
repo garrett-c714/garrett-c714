@@ -31,3 +31,11 @@ vim.keymap.set("n", "<leader>4", function() harpoon:list():select(4) end)
 
 vim.keymap.set("n", "<C-h>g", function() harpoon:list():prev() end)
 vim.keymap.set("n", "<C-h>j", function() harpoon:list():next() end)
+
+-- MarkdownPreview
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "markdown",
+    callback = function()
+        vim.keymap.set("n", "<localleader>t", "<Plug>MarkdownPreviewToggle")
+    end
+})
