@@ -21,8 +21,20 @@ vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help ta
 
 -- Harpoon
 local harpoon = require("harpoon")
-vim.keymap.set("n", "<leader>a", function() harpoon:list():add() end)
-vim.keymap.set("n", "<leader>h", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
+vim.keymap.set("n", "<leader>hu", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
+vim.keymap.set("n", "<leader>ha", function() harpoon:list():add() end)
+vim.keymap.set("n", "<leader>hd", function()
+    local pins = harpoon:list()
+    local current_path = vim.fn.fnamemodify(vim.fn.expand("%:p"), ":p")
+    for _, item in ipairs(pins.items) do
+        local item_path = vim.fn.fnamemodify(item.value, ":p")
+        if item_path == current_path then
+            pins:remove()
+            vim.api.nvim_echo({{"Removed from Harpoon pins", "Normal"}}, false, {})
+            return
+        end
+    end
+end)
 
 vim.keymap.set("n", "<leader>1", function() harpoon:list():select(1) end)
 vim.keymap.set("n", "<leader>2", function() harpoon:list():select(2) end)
