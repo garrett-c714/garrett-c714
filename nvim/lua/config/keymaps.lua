@@ -1,3 +1,8 @@
+-- General
+vim.keymap.set("n", "<leader>z", function()
+    vim.wo.foldcolumn = (vim.wo.foldcolumn == "1") and "0" or "1"
+end, { desc = "Toggle fold gutter" })
+
 -- LSPConfig
 vim.api.nvim_create_autocmd("LspAttach", {
     callback = function(event)
