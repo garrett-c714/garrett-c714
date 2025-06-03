@@ -8,7 +8,6 @@ vim.diagnostic.config({
 })
 
 -- Code Folding --
-vim.o.foldcolumn = "1"
 vim.o.foldlevel = 99
 vim.o.foldmethod = "expr"
 vim.o.foldexpr = "nvim_treesitter#foldexpr()"
