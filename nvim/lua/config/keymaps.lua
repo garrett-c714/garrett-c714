@@ -56,3 +56,13 @@ vim.api.nvim_create_autocmd("FileType", {
         vim.keymap.set("n", "<localleader>t", "<Plug>MarkdownPreviewToggle")
     end
 })
+
+-- rest
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "http",
+    callback = function()
+        vim.keymap.set("n", "<localleader>r", "<cmd>Rest run<CR>", { desc = "Run REST request in cursor region" })
+        vim.keymap.set("n", "<localleader>e", "<cmd>Rest env select<CR>", { desc = "Select env file for REST variables" })
+    end
+})
+
