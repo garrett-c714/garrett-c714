@@ -4,9 +4,10 @@ local M = {
         "nvim-treesitter/nvim-treesitter",
     },
     --rocks = { "lua-curl", "nvim-nio", "mimetypes", "xml2lua" },
-    --Install: xml2lua, mimetypes
+    -- Install: xml2lua, mimetypes
 
     config = function()
+        --vim.g.rest_nvim = {
         require("rest-nvim").setup({
             custom_dynamic_variables = {},
             request = {
@@ -45,10 +46,10 @@ local M = {
                     return vim.fs.find(function(name, _)
                         return name:match(config.env.pattern)
                     end, {
-                        path = vim.fn.getcwd(),
-                        type = "file",
-                        limit = math.huge,
-                    })
+                            path = vim.fn.getcwd(),
+                            type="file",
+                            limit = math.huge,
+                        })
                 end,
             },
             ui = {
@@ -64,8 +65,9 @@ local M = {
             },
             _log_level = vim.log.levels.WARN,
         })
-    end
+    end,
 }
 
 --return {}
 return { M }
+

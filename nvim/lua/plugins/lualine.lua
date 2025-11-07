@@ -4,7 +4,8 @@ local M = {
     config = function()
         require("lualine").setup {
             options = {
-                icons_enabled = false,
+                -- requires patched nerd font -- Ex: Caskaydia Cove
+                icons_enabled = true,
                 theme = 'onedark',
                 component_separators = { left = "|", right = "|" },
                 section_separators = { left = "", right = "" },
@@ -39,7 +40,7 @@ local M = {
                 lualine_a = { 'mode' },
                 lualine_b = { 'branch', 'diff', 'diagnostics' },
                 lualine_c = { 'filename' },
-                lualine_x = { 'encoding', 'fileformat', 'filetype' },
+                lualine_x = { 'encoding', 'fileformat', 'filetype', },
                 lualine_y = { 'progress' },
                 lualine_z = { 'location' },
             },

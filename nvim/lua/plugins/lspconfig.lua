@@ -8,38 +8,41 @@ local M = {
     config = function()
         require("mason").setup()
         require("mason-lspconfig").setup({
-            ensure_installed = { "lua_ls", "ts_ls", "pyright", "jdtls" },
+            ensure_installed = { "lua_ls", "ts_ls", "cssls", "pyright", "jdtls", "csharp_ls", "gopls" },
             automatic_enable = false,
             -- automatic_installation = true,
         })
 
-        local lspconfig = require("lspconfig")
+        --local lspconfig = require("lspconfig")
         local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
         for _, server_name in ipairs(require("mason-lspconfig").get_installed_servers()) do
-                local opts = {
-                        capabilities = capabilities,
+            local opts = {
+                capabilities = capabilities,
+            }
+
+            if server_name == "cssls" then
+                opts.settings = {
+                    css = { validate = true },
+                    scss = { validate = true },
                 }
 
-                if server_name == "cssls" then
-                        opts.settings = {
-                                css = { validate = true },
-                                scss = { validate = true },
-                        }
+            elseif server_name == "lua_ls" then
+                opts.settings = {
+                    Lua = {
+                        diagnostics = {
+                            globals = { "vim" },
+                        },
+                    },
+                }
+            end
 
-                elseif server_name == "lua_ls" then
-                        opts.settings = {
-                                Lua = {
-                                        diagnostics = {
-                                                globals = { "vim" },
-                                        },
-                                },
-                        }
-                end
-
-                lspconfig[server_name].setup(opts)
+            --lspconfig[server_name].setup(opts)
+            vim.lsp.config(server_name, opts)
+            vim.lsp.enable(server_name)
         end
     end,
 }
 
 return { M }
+

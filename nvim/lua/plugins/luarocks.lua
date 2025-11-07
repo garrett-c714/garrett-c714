@@ -1,7 +1,7 @@
 local M = {
     "vhyrro/luarocks.nvim",
-    name="luarocks",
-    lazy = false,
+    name = "luarocks",
+    lazy=false,
     priority = 1000,
     opts = {
         rocks = { "lua-curl", "nvim-nio", "mimetypes", "xml2lua" },
@@ -10,3 +10,4 @@ local M = {
 
 return {}
 --return { M }
+

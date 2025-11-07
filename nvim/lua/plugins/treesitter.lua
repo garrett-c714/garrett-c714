@@ -5,7 +5,7 @@ local M = {
     end,
     config = function()
         require("nvim-treesitter.configs").setup {
-            ensure_installed = { "javascript", "typescript", "python", "java", "http" },
+            ensure_installed = { "javascript", "typescript", "tsx", "css", "scss", "python", "java", "http", "markdown", "c_sharp", "go" },
             -- http required for rest.nvim
 
             highlight = {

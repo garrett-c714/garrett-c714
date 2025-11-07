@@ -11,3 +11,12 @@ vim.diagnostic.config({
 vim.o.foldlevel = 99
 vim.o.foldmethod = "expr"
 vim.o.foldexpr = "nvim_treesitter#foldexpr()"
+
+-- Spell Check --
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = { "markdown" },
+    callback = function()
+        vim.opt_local.spell = true
+        vim.opt_local.spelllang = { "en_us" }
+    end,
+})

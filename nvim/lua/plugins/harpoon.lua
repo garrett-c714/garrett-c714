@@ -10,7 +10,7 @@ local M = {
         harpoon:setup({
             settings = {
                 save_on_toggle = false,
-                save_on_change = false,
+                sync_on_ui_close = false,
             }
         })
 
