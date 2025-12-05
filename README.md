@@ -1,10 +1,9 @@
 Hi! ![](https://user-images.githubusercontent.com/18350557/176309783-0785949b-9127-417c-8b55-ab5a4333674e.gif)My name is Garrett Cox
 ===================================================================================================================================
 
-\- Software Engineer
+Software Engineer
 ---------------------------
 
-I fell in love with programming as soon as I took my first computer science course in high school. Ever since then I've known that I wanted to work in the technology world. I'm currently  working at [Peraton](https://www.peraton.com/) as a Software Engineer. Outside of work, I'm a big fan of the outdoors. You'll find me hiking, snowboarding, or playing disc golf pretty much whenever I get the chance!
 
 *   🌍  I'm based in Herndon, VA
 *   ✉️  You can contact me at [gcox5714@gmail.com](mailto:gcox5714@gmail.com)
