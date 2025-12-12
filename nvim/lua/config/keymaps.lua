@@ -32,7 +32,18 @@ vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" 
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
 vim.keymap.set("n", "<leader>fc", builtin.colorscheme, { desc = "Telescope colorscheme picker" })
 
+-- Grapple
+vim.keymap.set("n", "<leader>gu", "<cmd>Grapple toggle_tags<CR>", { desc = "Show Grapple UI" })
+vim.keymap.set("n", "<leader>gt", "<cmd>Grapple toggle<CR>", { desc = "Grapple file" })
+
+vim.keymap.set("n", "<leader>1", "<cmd>Grapple select index=1<CR>")
+vim.keymap.set("n", "<leader>2", "<cmd>Grapple select index=2<CR>")
+vim.keymap.set("n", "<leader>3", "<cmd>Grapple select index=3<CR>")
+vim.keymap.set("n", "<leader>4", "<cmd>Grapple select index=4<CR>")
+
+
 -- Harpoon
+--[[
 local harpoon = require("harpoon")
 vim.keymap.set("n", "<leader>hu", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
 vim.keymap.set("n", "<leader>ha", function() harpoon:list():add() end)
@@ -63,6 +74,7 @@ vim.keymap.set("n", "<leader>4", function() harpoon:list():select(4) end)
 
 vim.keymap.set("n", "<C-h>g", function() harpoon:list():prev() end)
 vim.keymap.set("n", "<C-h>j", function() harpoon:list():next() end)
+]]--
 
 -- Markdown
 vim.api.nvim_create_autocmd("FileType", {

@@ -60,6 +60,14 @@ local M = {
                 { name = "buffer" },
                 { name = "path" },
             }),
+            --[[
+            window = {
+                completion = cmp.config.window.bordered({
+                    border = 'none',
+                    winhighlight = "Normal:CmpPmenu,CursorLine:PmenuSel,FloatBorder:CmpPmenuBorder"
+                })
+            }
+            ]]--
         })
 
         -- Command Line completion

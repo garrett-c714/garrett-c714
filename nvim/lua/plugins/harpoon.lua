@@ -1,3 +1,4 @@
+--[[
 local M = {
     "ThePrimeagen/harpoon",
     branch = "harpoon2",
@@ -16,5 +17,7 @@ local M = {
 
     end
 }
+]]--
 
-return { M }
+--return { M }
+return {}
