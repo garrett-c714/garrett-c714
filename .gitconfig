@@ -6,4 +6,5 @@
 [alias]
 	st = status --short
 	logo = log --oneline
+	graph = log --all --abbrev-commit --graph --decorate --pretty
 	yolo = !git commit -m \"$(curl -s http://whatthecommit.com/index.txt)\"
