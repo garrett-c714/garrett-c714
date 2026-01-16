@@ -6,6 +6,9 @@ end, { desc = "Toggle fold gutter" })
 
 vim.keymap.set("n", "<leader>-", "<cmd>Ex<CR>", { desc = "Explore directory at buffer" })
 
+vim.keymap.set("n", "<A-k>", "<cmd>m.-2<CR>", { desc = "Move line up" })
+vim.keymap.set("n", "<A-j>", "<cmd>m.+1<CR>", { desc = "Move line down" })
+
 
 -- LSPConfig
 vim.api.nvim_create_autocmd("LspAttach", {
