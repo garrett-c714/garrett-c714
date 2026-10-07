@@ -1,5 +1,5 @@
 [core]
-	editor = nvim
+	editor = nvim --clean -f
 [user]
 	name = Garrett Cox
 	email = gcox5714@gmail.com
